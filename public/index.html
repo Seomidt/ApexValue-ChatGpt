@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApexValue — Valuation Copilot</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>ApexValue Valuation Copilot</h1>
+        <p>Indtast dine nøgletal og få et hurtigt estimat.</p>
+
+        <form id="valuation-form" class="grid">
+          <label>Årlig omsætning (DKK)
+            <input name="annualRevenue" type="number" min="0" required value="5000000" />
+          </label>
+          <label>Årlig vækst (%)
+            <input name="yearlyGrowthPercent" type="number" required value="40" />
+          </label>
+          <label>Bruttomargin (%)
+            <input name="grossMarginPercent" type="number" min="0" max="100" required value="65" />
+          </label>
+          <label>Churn (%)
+            <input name="churnPercent" type="number" min="0" max="100" required value="8" />
+          </label>
+          <label>TAM (DKK)
+            <input name="marketSize" type="number" min="0" required value="2500000000" />
+          </label>
+          <button type="submit">Beregn valuation</button>
+        </form>
+      </section>
+
+      <section class="card" id="result-card" hidden>
+        <h2>Resultat</h2>
+        <div id="range"></div>
+        <p id="meta"></p>
+        <p id="summary"></p>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

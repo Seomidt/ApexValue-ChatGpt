@@ -1,0 +1,11 @@
+{
+  "name": "apexvalue-chatgpt",
+  "version": "0.1.0",
+  "description": "MVP for ApexValue valuation assistant",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  }
+}
